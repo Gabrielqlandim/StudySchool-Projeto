@@ -9,6 +9,7 @@ header {
     color: #fff;
     padding: 30px;
     text-align: center;
+    
 }
 
 nav ul {
@@ -23,8 +24,9 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .icon {
