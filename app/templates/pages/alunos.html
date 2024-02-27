@@ -15,13 +15,42 @@
         <li><a href="{% url 'disciplinas' %}">Disciplinas</a></li>
         <li><a href="{% url 'calendario_academico' %}">Calendário Acadêmico</a></li>
         <li><a href="{% url 'perfil' %}">Perfil do professor</a></li>
-
       </ul>
     </nav>
   </header>
 
-  <h1>Portal dos Alunos</h1>
+  <section>
+    <div class='grids' onclick="notas()">
+      notas
+    </div>
+    <div class='grids' onclick="desempenho()">
+      desempenho
+    </div>
+    <div class='grids' onclick="frequencia()">
+      frequencia
+    </div>
+    <div class='grids' onclick="avaliacao()">
+      avaliacao
+    </div>
+  </section>
 
+  <h1>Portal dos Alunos</h1>
+  <p id='teste'>teste</p>
+
+  <script>
+    function notas() {
+      window.location.replace("{% url 'notas' %}")
+    }
+    function desempenho() {
+      window.location.replace("{% url 'desempenho' %}")
+    }
+    function frequencia() {
+      window.location.replace("{% url 'frequencia' %}")
+    }
+    function avaliacao() {
+      window.location.replace("{% url 'avaliacao' %}")
+    }
+  </script>
 </body>
 
 </html>

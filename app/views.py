@@ -15,3 +15,15 @@ def calendario_academico(request):
 
 def perfil(request):
     return render(request, 'pages/perfil.html')
+
+def alunos_notas(request):
+    return render(request, 'pages/alunos/notas.html')
+
+def alunos_desempenho(request):
+    return render(request, 'pages/alunos/desempenho.html')
+
+def alunos_frequencia(request):
+    return render(request, 'pages/alunos/frequencia.html')
+
+def alunos_avaliacao(request):
+    return render(request, 'pages/alunos/avaliacao.html')

@@ -43,5 +43,28 @@ nav a {
     width: 100%;
     width: fit-content;
 }
+section{
+    display: flex;
+}
+.grids{
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgb(97, 97, 129);
+    margin-left:120px ;
+    margin-top: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: scale(1);
+    text-align: center;
+    line-height: 450px;
+    color: white;
+}
+
+.grids:hover {
+    transform: scale(1.04); 
+    transition: transform 0.3s ease; /
+}
+
 
 
