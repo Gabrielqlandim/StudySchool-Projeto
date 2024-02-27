@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #3498db;
+    background-color: #F24405;
     color: #fff;
     padding: 30px;
     text-align: center;
@@ -50,7 +50,7 @@ section{
     width: 320px;
     height: 500px;
     border-radius: 20px;
-    background-color: rgb(97, 97, 129);
+    background-color: rgb(112, 97, 129);
     margin-left:120px ;
     margin-top: 50px;
     box-sizing: border-box;
@@ -66,5 +66,21 @@ section{
     transition: transform 0.3s ease; /
 }
 
+*{
+    padding: 0;
+    margin: 0;
+}
+.conteudo{
+    left: 50%;
+    margin: 0 0 0 -250px;
+    position: absolute;
+    width: 500px;
+    background: red;
+}
 
-
+h2{
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
