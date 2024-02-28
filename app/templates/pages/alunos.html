@@ -32,10 +32,10 @@
     <div class='grids' onclick="avaliacao()">
       avaliacao
     </div>
+    <div class='grids' onclick="lista()">
+      lista de alunos
+    </div>
   </section>
-
-  
-  <p id='teste'>teste</p>
 
   <script>
     function notas() {
@@ -49,6 +49,9 @@
     }
     function avaliacao() {
       window.location.replace("{% url 'avaliacao' %}")
+    }
+    function lista() {
+      window.location.replace("{% url 'lista' %}")
     }
   </script>
 </body>

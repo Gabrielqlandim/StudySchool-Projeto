@@ -13,4 +13,5 @@ urlpatterns = [
     path('pages/alunos/desempenho/', views.alunos_desempenho, name= 'desempenho'),
     path('pages/alunos/frequencia/', views.alunos_frequencia, name= 'frequencia'),
     path('pages/alunos/avaliacao/', views.alunos_avaliacao, name= 'avaliacao'),
+    path('pages/alunos/lista/', views.alunos_lista, name= 'lista'),
 ]

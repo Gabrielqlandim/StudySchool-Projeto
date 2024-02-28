@@ -27,3 +27,6 @@ def alunos_frequencia(request):
 
 def alunos_avaliacao(request):
     return render(request, 'pages/alunos/avaliacao.html')
+
+def alunos_lista(request):
+    return render(request, 'pages/alunos/lista.html')
