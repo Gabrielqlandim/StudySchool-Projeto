@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 
+#home
 def home(request):
     return render(request, 'pages/home.html')
 
@@ -15,6 +16,11 @@ def calendario_academico(request):
 
 def perfil(request):
     return render(request, 'pages/perfil.html')
+
+def cadastro(request):
+    return render(request, 'pages/cadastrar_alunos.html')
+
+#Alunos
 
 def alunos_notas(request):
     return render(request, 'pages/alunos/notas.html')

@@ -8,6 +8,8 @@ urlpatterns = [
     path('disciplinas/', views.disciplinas, name ='disciplinas'),
     path('calendario_academico/', views.calendario_academico, name = 'calendario_academico'),
     path('perfil/', views.perfil, name = 'perfil'),
+    path('cadastrar_alunos/', views.cadastro, name = 'cadastro'),
+
     
     path('pages/alunos/notas/', views.alunos_notas, name= 'notas'),
     path('pages/alunos/desempenho/', views.alunos_desempenho, name= 'desempenho'),
