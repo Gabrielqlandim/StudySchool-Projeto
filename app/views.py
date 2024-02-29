@@ -1,5 +1,20 @@
 from django.shortcuts import render
+from .models import Usuarios, Aluno
 
+#auth
+def criar_usuario(request):
+    novo_usuario = Usuarios()
+    request.POST.get('username')
+    request.POST.get('email')
+    request.POST.get('passworld')
+
+#cadastro
+def criar_aluno(request):
+    novo_aluno = Aluno()
+    request.POST.get('nome')
+    request.POST.get('idade')
+    request.POST.get('ano')
+    request.POST.get('turma')
 
 #home
 def home(request):
