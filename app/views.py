@@ -1,12 +1,36 @@
 from django.shortcuts import render
-from .models import Usuarios, Aluno
+from .models import Aluno
+from django.contrib.auth.models import User
 
 #auth
 def criar_usuario(request):
-    novo_usuario = Usuarios()
-    request.POST.get('username')
-    request.POST.get('email')
-    request.POST.get('passworld')
+    username =  request.POST.get('username')
+    email = request.POST.get('email')
+    senha = request.POST.get('passworld')
+
+    User.objects.get(username=username).first()
+
+    if user:
+        return HttpResponse('Já existe um usuario com esse nome.').first()
+
+    user = User.objects.create_user(username=username,email=email,password=senha)
+    user.save()
+
+    return HttpResponse('Usuário Cadastrado!')
+
+#login
+def login(request):
+    email = request.POST.get('email')
+    senha = request.POST.get('passworld')
+
+    user = authenticate(email=email, password=senha)
+
+    if user:
+        login(request,user)
+        return HttpResponse('Autenticado!')
+    else:
+        return HttpResponse('Email ou senha inválido!')
+
 
 #cadastro
 def criar_aluno(request):
