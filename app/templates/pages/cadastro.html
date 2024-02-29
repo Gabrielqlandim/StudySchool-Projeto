@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,22 +58,30 @@
 
 <body>
     <header>Cadastro</header>
-
+    <div hidden>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <p id='alertmessage'{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            {% endfor %}
+        </ul>
+        {% endif %}        
+    </div>
     <section>
         <br><br>
-        <form onsubmit="cadastrar(); return false;" method="POST">
+        <form action  = "{% url 'cadastro' %}" method="POST">{% csrf_token %}
             <div>
-                <p>Nome : <input type="text" class="cadastro-input" id="nome" name="username" required></p>
+                <p>Nome : <input type="text" class="cadastro-input" id="nome" name="name" required></p>
             </div>
             <div>
                 <p>Email : <input type="email" class="cadastro-input" id="email" name="email" required></p>
             </div>
             <div>
-                <p>Senha : <input type="password" class="cadastro-input" id="senha" name="password"
+                <p>Senha : <input type="password" class="cadastro-input" id="senha" name="senha"
                         onkeydown="verificarEnter(event)" required></p>
             </div>
             <p>
-                <input type="submit" value="Cadastrar" id="botao">
+                <input type="submit" value="Cadastrar" id="botao" >
             </p>
         </form>
     </section>
@@ -90,10 +97,10 @@
             var nome = document.getElementById("nome").value;
             var email = document.getElementById("email").value;
             var senha = document.getElementById("senha").value;
+            let htmlTxt = document.getElementById("alertmessage");
 
             if (nome && email && senha) {
-                window.location.replace("{% url 'login' %}")
-                alert("Cadastro realizado com sucesso!");
+                alert("teste");
             } else {
                 alert("Preencha todos os campos obrigatórios.");
             }

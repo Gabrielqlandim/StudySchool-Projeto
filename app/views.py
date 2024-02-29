@@ -1,25 +1,60 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-
+from django.http import HttpResponse,HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as lg
 
 #login
 def login(request):
-    return render(request, 'pages/login.html')
+    if request.method == 'GET':
+        return render(request, 'pages/login.html')
+    elif request.method == 'POST':
+        name = request.POST.get('name')
+        senha = request.POST.get('senha')
+        
+        user = authenticate(request,username=name,password=senha)
 
+        if user:
+            lg(request, user)
+            return render(request, 'pages/home.html')
+        else:
+            print(user)
+            return HttpResponse('email ou senha invalidos')
+        
 def cadastro_prof(request):
-    return render(request, 'pages/cadastro.html' )
+    if request.method == 'GET':
+        return render(request, 'pages/cadastro.html' )
+    elif request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
 
-#cadastro
+        user = User.objects.filter(username=name).first()
+
+        if user:
+            messages.success(request, 'Usuário já existente.')
+            return HttpResponseRedirect('/cadastro/')
+        else:
+            user = User.objects.create_user(username=name,email=email,password=senha)
+            user.save()
+
+            messages.success(request, 'Usuário cadastrado!')
+        return HttpResponseRedirect('/')
+        
+
+#cadastro de aluno
 def criar_aluno(request):
-    novo_aluno = Aluno()
-    request.POST.get('nome')
-    request.POST.get('idade')
-    request.POST.get('ano')
-    request.POST.get('turma')
-    
+    return
+
+
 #home
 def home(request):
-    return render(request, 'pages/home.html')
+    print(request.user.is_authenticated, request.user.is_active)
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/home.html')
+    else:
+        return HttpResponse('Você precisa estar logado!')
 
 def alunos(request):
     return render(request, 'pages/alunos.html')
@@ -52,3 +87,9 @@ def alunos_avaliacao(request):
 
 def alunos_lista(request):
     return render(request, 'pages/alunos/lista.html')
+
+def plataforma(request):
+    if request.user.is_authenticated:
+        return
+    else:
+        return HttpResponse('Você precisa estar logado!')

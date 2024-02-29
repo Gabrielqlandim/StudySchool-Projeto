@@ -80,14 +80,13 @@
 
     <section>
         <br><br>
-        <form onsubmit="clicar(); return false;" method="POST">
+        <form onsubmit="clicar(); return false;" action  = "{% url 'login' %}" method="POST">{% csrf_token %}
             <div>
-                <p>Email: <input type="text" class="login-input" id="login" name="email">
+                <p>Nome: <input type="text" class="login-input" id="email" name="name">
             </div>
             </p>
             <div>
-                <p>Senha: <input type="password" class="login-input" id="senha" onkeydown="verificarEnter(event)"
-                        name="password">
+                <p>Senha: <input type="password" class="login-input" id="senha" onkeydown="verificarEnter(event)" name="senha">
             </div>
             </p>
             <p>
@@ -98,17 +97,6 @@
     </section>
 
     <script>
-        function clicar() {
-            var login = document.getElementById("login").value;
-            var senha = document.getElementById("senha").value;
-
-            if (login === 'admin' && senha === '123') {
-                window.location.replace("{% url 'home'%}")
-            } else {
-                window.alert("Login ou Senha incorretos");
-            }
-        }
-
         function verificarEnter(event) {
             if (event.key === "Enter") {
                 clicar();
