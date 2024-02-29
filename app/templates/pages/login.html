@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: blue;
+            background-image: url('{% static "css/fundo.jpg" %}');
+        }
+
+        section {
+            background-color: white;
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            color: white;
+            font-size: 45px;
+            font-family: "Madimi One", sans-serif;
+            text-align: center;
+            margin-top: 30px;
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .login-input {
+            width: 200px;
+            height: 30px;
+        }
+
+        #senha {
+            margin-top: 20px;
+        }
+
+        #cadastrar-btn {
+            margin-left: 375px;
+            margin-top: -5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #botao {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: #c5c5b7;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+</head>
+
+<body>
+    <header>Login</header>
+
+    <section>
+        <br><br>
+        <form onsubmit="clicar(); return false;" method="POST">
+            <div>
+                <p>Email: <input type="text" class="login-input" id="login" name="email">
+            </div>
+            </p>
+            <div>
+                <p>Senha: <input type="password" class="login-input" id="senha" onkeydown="verificarEnter(event)"
+                        name="password">
+            </div>
+            </p>
+            <p>
+                <input type="submit" value="Login" id="botao">
+            </p>
+            <a id="cadastrar-btn" onclick="cadastrar()">Cadastrar</a>
+        </form>
+    </section>
+
+    <script>
+        function clicar() {
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+
+            if (login === 'admin' && senha === '123') {
+                window.location.replace("{% url 'home'%}")
+            } else {
+                window.alert("Login ou Senha incorretos");
+            }
+        }
+
+        function verificarEnter(event) {
+            if (event.key === "Enter") {
+                clicar();
+            }
+        }
+
+        function cadastrar() {
+            window.location.replace("{% url 'cadastro' %}")
+        }
+    </script>
+</body>
+
+</html>

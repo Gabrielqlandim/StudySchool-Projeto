@@ -1,9 +1,104 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    {% include "pages/head.html" %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: blue;
+            background-image: url('{% static "css/fundo.jpg" %}');
+        }
+
+        section {
+            background-color: white;
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        header {
+            color: white;
+            font-size: 45px;
+            font-family: "Madimi One", sans-serif;
+            text-align: center;
+            margin-top: 30px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .cadastro-input {
+            width: 200px;
+            height: 30px;
+        }
+
+        #botao {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: #c5c5b7;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Cadastrar professor</title>
 </head>
+
 <body>
-    
+    <header>Cadastro</header>
+
+    <section>
+        <br><br>
+        <form onsubmit="cadastrar(); return false;" method="POST">
+            <div>
+                <p>Nome : <input type="text" class="cadastro-input" id="nome" name="username" required></p>
+            </div>
+            <div>
+                <p>Email : <input type="email" class="cadastro-input" id="email" name="email" required></p>
+            </div>
+            <div>
+                <p>Senha : <input type="password" class="cadastro-input" id="senha" name="password"
+                        onkeydown="verificarEnter(event)" required></p>
+            </div>
+            <p>
+                <input type="submit" value="Cadastrar" id="botao">
+            </p>
+        </form>
+    </section>
+
+    <script>
+        function verificarEnter(event) {
+            if (event.key === "Enter") {
+                cadastrar();
+            }
+        }
+
+        function cadastrar() {
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            if (nome && email && senha) {
+                window.location.replace("{% url 'login' %}")
+                alert("Cadastro realizado com sucesso!");
+            } else {
+                alert("Preencha todos os campos obrigatórios.");
+            }
+        }
+    </script>
 </body>
+
 </html>

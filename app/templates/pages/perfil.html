@@ -4,22 +4,8 @@
 </head>
 
 <body>
-  <header>
-    <a href="http://127.0.0.1:8000/" class='logo'>
-      <h1><i class="fa-solid fa-school icon"></i>Lyceum Escolar</h1>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="{% url 'cadastro' %}">Cadastrar Alunos</a></li>
-        <li><a href="{% url 'alunos' %}">Alunos</a></li>
-        <li><a href="{% url 'disciplinas' %}">Disciplinas</a></li>
-        <li><a href="{% url 'calendario_academico' %}">Calendário Acadêmico</a></li>
-        <li><a href="{% url 'perfil' %}">Perfil do professor</a></li>
+  {% include "pages/header.html" %} {#Menu do programa#}
 
-      </ul>
-    </nav>
-
-  </header>
 
   <h1>Perfil do professor</h1>
 
