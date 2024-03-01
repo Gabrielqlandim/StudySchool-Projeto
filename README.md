@@ -2,66 +2,23 @@
 ## Introdução
 O Lyceum é um projeto Django que visa criar uma plataforma de gerenciamento escolar focada na perspectiva dos professores. Sua finalidade é simplificar tarefas administrativas, como registro de aulas, atribuição de notas e acompanhamento do desempenho dos alunos.
 
-<h2>Links Importantes</h2>
-<ul>
-  <li>
-    <a
-      href=""
-      >Figma</a
-    >
-  </li>
-  <li>
-    <a
-      href=""
-      >Jira Software</a
-    >
-  </li>
-</ul>
+## Links Importantes</h2>
 
-<p>Entrega 1</p>
-<ul>
-  <li>
-    <a
-      href=""
-      >Screen Cast</a
-    >
-  </li>
-  <li>
-    <a
-      href=""
-      >Quadro Jira</a
-    >
-  </li>
-  <li>
-    <a
-      href=""
-      >Backlog Jira</a
-    >
-  </li>
-</ul>
+### Entrega 01
+- [Figma]()
+- [Screen Cast]()
+- [Quadro Jira](https://zibec.atlassian.net/jira/software/projects/CEBIZ/boards/2?atlOrigin=eyJpIjoiNWE5YjNhNmM4NjI1NDBlM2FhMjllZDU5NTFhOTYxYmMiLCJwIjoiaiJ9)
+- [Backlog Jira](https://zibec.atlassian.net/jira/software/projects/CEBIZ/boards/2/backlog?atlOrigin=eyJpIjoiOWQxZjk5OWVjOGNjNGMzYzhlOTFlNGIzMmNmNzQ1ZTAiLCJwIjoiaiJ9)
 
-<h2>Equipe</h2>
-<ul>
-  <li>
-    <a href="">Felipe Albuquerque</a> - farf@cesar.school 📩
-  </li>
-  <li>
-    <a href="">Felipe Matias</a> - fmfs@cesar.school 📩
-  </li>
-  <li>
-   <a href="">Gabriel Landim</a> - gqsl@cesar.school 📩
-  </li>
-  <li>
-    <a href="">Lucas Ferreira</a> - lfta@cesar.school 📩
-  </li>
-  <li>
-    <a href="">Luís Gustavo</a> - lgmf@cesar.school 📩
-  </li>
-  <li>
-    <a href="">Pedro Sampaio</a> - pssa@cesar.schol 📩
-  </li>
-</ul>
-<h2>Contribuintes 👨‍👩‍👧‍👦</h2>
+## Equipe
+- [Felipe Albuquerque]() - farf@cesar.school 📩
+- [Felipe Matias]() - fmfs@cesar.school 📩
+- [Gabriel Landim]() - gqsl@cesar.school 📩
+- [Lucas Ferreira](https://github.com/seconds4decay) - lfta@cesar.school 📩
+- [Luís Gustavo]() - lgmf@cesar.school 📩
+- [Pedro Sampaio]() - pssa@cesar.schol 
+
+## Contribuintes 👨‍👩‍👧‍👦
 <a href="https://github.com/Gabrielqlandim/fds-projeto/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Gabrielqlandim/fds-projeto" />
 </a>
