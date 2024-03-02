@@ -16,7 +16,7 @@ O Lyceum é um projeto Django que visa criar uma plataforma de gerenciamento esc
 - [Gabriel Landim](https://github.com/Gabrielqlandim) - gqsl@cesar.school 📩
 - [Lucas Ferreira](https://github.com/seconds4decay) - lfta@cesar.school 📩
 - [Luís Gustavo]() - lgmf@cesar.school 📩
-- [Pedro Sampaio]() - pssa@cesar.schol 📩
+- [Pedro Sampaio](https://github.com/PedrooSam) - pssa@cesar.schol 📩
 
 ## Contribuintes 👨‍👩‍👧‍👦
 <a href="https://github.com/Gabrielqlandim/fds-projeto/graphs/contributors">
