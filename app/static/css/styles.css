@@ -158,11 +158,16 @@ h2{
     background: #00addf;
     display: block;
     position: absolute;
-    border-radius: 50%;  
+    border-radius: 50%;
 }
 .event:hover::after{
     background: #f9f9f9;
 }
 .event.dia-atual:after{
     background: #f9f9f9;
+}
+
+#table_freq{
+    border: #000000;
+    background-color: #00addf;
 }
