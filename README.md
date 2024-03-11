@@ -11,11 +11,11 @@ O Lyceum é um projeto Django que visa criar uma plataforma de gerenciamento esc
 - [Backlog Jira](https://zibec.atlassian.net/jira/software/projects/CEBIZ/boards/2/backlog?atlOrigin=eyJpIjoiOWQxZjk5OWVjOGNjNGMzYzhlOTFlNGIzMmNmNzQ1ZTAiLCJwIjoiaiJ9)
 
 ## Equipe
-- [Felipe Albuquerque]() - farf@cesar.school 📩
-- [Felipe Matias]() - fmfs@cesar.school 📩
+- [Felipe Albuquerque](https://github.com/) - farf@cesar.school 📩
+- [Felipe Matias](https://github.com/Zibec) - fmfs@cesar.school 📩
 - [Gabriel Landim](https://github.com/Gabrielqlandim) - gqsl@cesar.school 📩
 - [Lucas Ferreira](https://github.com/seconds4decay) - lfta@cesar.school 📩
-- [Luís Gustavo]() - lgmf@cesar.school 📩
+- [Luís Gustavo](https://github.com/) - lgmf@cesar.school 📩
 - [Pedro Sampaio](https://github.com/PedrooSam) - pssa@cesar.schol 📩
 
 ## Contribuintes 👨‍👩‍👧‍👦
