@@ -1,4 +1,12 @@
 # Study School
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Gabrielqlandim/StudySchool-Projeto/o?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/Gabrielqlandim/StudySchool-Projeto/?style=flat&logo=python)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Gabrielqlandim/StudySchool-Projeto/?style=flat&logo=github)
+![Commits](https://img.shields.io/github/commit-activity/t/Gabrielqlandim/StudySchool-Projeto/?style=flat&logo=github)
+[![GitHub](https://img.shields.io/github/license/Gabrielqlandim/StudySchool-Projeto/)](LICENSE.md)
+[![CI](https://github.com/Gabrielqlandim/StudySchool-Projeto/actions/workflows/prod_kolekto.yml/badge.svg)](https://github.com/P-E-N-T-E-S/Kolekto/actions/workflows/ci.yml)
+
 ## Introdução
 O Study School é um projeto Django que visa criar uma plataforma de gerenciamento escolar focada na perspectiva dos professores. Sua finalidade é simplificar tarefas administrativas, como registro de aulas, atribuição de notas e acompanhamento do desempenho dos alunos.
 
