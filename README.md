@@ -21,7 +21,7 @@ O Study School é um projeto Django que visa criar uma plataforma de gerenciamen
 
 ### Entrega 01
 - [Figma](https://www.figma.com/team_invite/redeem/tN4LspGSMEIAYlOzOiE5rs)
-- [Screen Cast]()
+- [Screen Cast]( https://youtu.be/VUmMxBbVBKc )
 - [Quadro Jira](https://zibec.atlassian.net/jira/software/projects/CEBIZ/boards/2?atlOrigin=eyJpIjoiNWE5YjNhNmM4NjI1NDBlM2FhMjllZDU5NTFhOTYxYmMiLCJwIjoiaiJ9)
 - [Backlog Jira](https://zibec.atlassian.net/jira/software/projects/CEBIZ/boards/2/backlog?atlOrigin=eyJpIjoiOWQxZjk5OWVjOGNjNGMzYzhlOTFlNGIzMmNmNzQ1ZTAiLCJwIjoiaiJ9)
 
