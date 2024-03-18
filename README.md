@@ -28,7 +28,8 @@ O Study School é um projeto Django que visa criar uma plataforma de gerenciamen
 
   ![image](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/ea8684a6-1f1c-4e61-bdef-e8f317a97669)
 
-  ![image](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/510f9b13-9f49-4347-b52d-1eeb981afafa)
+  ![image](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/1fe47856-4336-4774-b8fc-831363dcfb20)
+
 
 
 
