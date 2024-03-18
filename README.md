@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Gabrielqlandim/StudySchool-Projeto?style=flat)
 ![GitHub language count](https://img.shields.io/github/languages/count/Gabrielqlandim/StudySchool-Projeto?style=flat&logo=python)
-![Bitbucket open issues ](https://img.shields.io/bitbucket/issues/Gabrielqlandim/StudySchool-Projeto)
 ![Commits](https://img.shields.io/github/commit-activity/t/Gabrielqlandim/StudySchool-Projeto?style=flat&logo=github)
 ![GitHub License](https://img.shields.io/github/license/Gabrielqlandim/StudySchool-Projeto)
 
