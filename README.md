@@ -1,4 +1,5 @@
-![logo](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/b082147b-f058-4290-aca9-20767e1e6d4f)
+![logo](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/6199a50d-b9e4-4757-beff-8286072e2e08)
+
 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Gabrielqlandim/StudySchool-Projeto?style=flat)
