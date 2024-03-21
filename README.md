@@ -1,4 +1,5 @@
-# Study School
+![logo](https://github.com/Gabrielqlandim/StudySchool-Projeto/assets/74963264/b082147b-f058-4290-aca9-20767e1e6d4f)
+
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Gabrielqlandim/StudySchool-Projeto?style=flat)
 ![GitHub language count](https://img.shields.io/github/languages/count/Gabrielqlandim/StudySchool-Projeto?style=flat&logo=python)
