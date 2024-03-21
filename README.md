@@ -6,7 +6,7 @@
 ![GitHub License](https://img.shields.io/github/license/Gabrielqlandim/StudySchool-Projeto)
 
 ## Introdução
-O Study School é um projeto Django que visa criar uma plataforma de gerenciamento escolar focada na perspectiva dos professores. O objetivo central do Study School é simplificar as tarefas administrativas enfrentadas pelos educadores, como registro de aulas, atribuição de notas e acompanhamento do desempenho dos alunos.
+O Study School é um projeto Django que visa criar uma plataforma de gerenciamento escolar focada na perspectiva dos professores. O objetivo central do Study School é simplificar as tarefas administrativas enfrentadas pelos educadores, oferecendo uma solução abrangente para o registro de aulas, atribuição de notas e acompanhamento do desempenho dos alunos.
 
 ## Tecnologias Utilizadas
 - Linguagens de Programação: Python, JavaScript.
