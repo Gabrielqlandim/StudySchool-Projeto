@@ -7,12 +7,10 @@ from django.contrib.auth import login as lg
 
 #home
 def home(request):
-    print(request.user.is_authenticated, request.user.is_active)
     if request.user.is_authenticated and request.user.is_active:
         return render(request, 'pages/home.html')
     else:
-        return HttpResponse('Você precisa estar logado!')
-
+        return HttpResponseRedirect('/')
 #login
 def login(request):
     if request.method == 'GET':
@@ -56,36 +54,62 @@ def criar_aluno(request):
     return
 
 def alunos(request):
-    return render(request, 'pages/alunos.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/alunos.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def disciplinas(request):
-    return render(request, 'pages/disciplinas.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/disciplinas.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def calendario_academico(request):
-    return render(request, 'pages/calendario_academico.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/calendario_academico.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def perfil(request):
     if request.method == 'GET':
-        return render(request, 'pages/perfil.html')
+        if request.user.is_authenticated and request.user.is_active:
+            return render(request, 'pages/perfil.html')
+        else:
+            return HttpResponse('Você precisa estar logado!')
     if request.method == 'POST':
-        logout(request,user)
-        return render(request, 'pages/login.html')
+        user = User.objects.filter().first()
+        logout(request)
+        return HttpResponseRedirect('/')
 
 #Alunos
 def alunos_notas(request):
-    return render(request, 'pages/alunos/notas.html')
+    if request.user.is_authenticated and request.user.is_active:
+            return render(request, 'pages/alunos/notas.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def alunos_desempenho(request):
-    return render(request, 'pages/alunos/desempenho.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/alunos/desempenho.html')
+    else:
+        return HttpResponseRedirect('/')
+        
 
 def alunos_frequencia(request):
-    return render(request, 'pages/alunos/frequencia.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/alunos/frequencia.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def alunos_avaliacao(request):
-    return render(request, 'pages/alunos/avaliacao.html')
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/alunos/avaliacao.html')
+    else:
+        return HttpResponseRedirect('/')
 
 def plataforma(request):
     if request.user.is_authenticated:
         return
     else:
-        return HttpResponse('Você precisa estar logado!')
+        return HttpResponseRedirect('/')

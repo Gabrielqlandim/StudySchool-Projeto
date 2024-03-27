@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableDays = document.getElementById('dias');
     function GetDaysCalendar(mes,ano){
         document.getElementById('mes').innerHTML = monthsBR[mes];
-        //console.log(monthsBR[mes]);
+        //console.log(monthsBR[mes);
         document.getElementById('ano').innerHTML = ano;
         let firstDayOfWeek = new Date(ano,mes,1).getDay()-1;
         let getLastDayThisMonth = new Date(ano,mes+1,0).getDate();
