@@ -10,19 +10,16 @@
   <h1>Portal dos Alunos</h1>
   <section>
     <div class='grids' onclick="notas()">
-      notas
+      Notas
     </div>
     <div class='grids' onclick="desempenho()">
-      desempenho
+      Desempenho
     </div>
     <div class='grids' onclick="frequencia()">
-      frequencia
+      Frequencia
     </div>
     <div class='grids' onclick="avaliacao()">
-      avaliacao
-    </div>
-    <div class='grids' onclick="lista()">
-      lista de alunos
+      Avaliação
     </div>
   </section>
 
@@ -38,9 +35,6 @@
     }
     function avaliacao() {
       window.location.replace("{% url 'avaliacao' %}")
-    }
-    function lista() {
-      window.location.replace("{% url 'lista' %}")
     }
   </script>
 </body>

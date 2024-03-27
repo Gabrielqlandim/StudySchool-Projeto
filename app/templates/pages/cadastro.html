@@ -42,6 +42,21 @@
             height: 30px;
         }
 
+        #login-btn {
+            margin-left: 395px;
+            margin-top: -50px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         #botao {
             cursor: pointer;
             font-size: 16px;
@@ -49,9 +64,11 @@
             border-radius: 5px;
             padding: 5px 10px;
             background-color: #c5c5b7;
-            margin-left: 20px;
-            margin-top: 10px;
         }
+        #botao, #login-btn {
+    display: inline-block;
+    vertical-align: middle;
+}
     </style>
     <title>Cadastrar professor</title>
 </head>
@@ -81,9 +98,16 @@
                         onkeydown="verificarEnter(event)" required></p>
             </div>
             <p>
+                
                 <input type="submit" value="Cadastrar" id="botao" >
+                
             </p>
+            
         </form>
+        
+        <a id="login-btn" onclick="logar()">Log in</a>
+
+
     </section>
 
     <script>
@@ -104,6 +128,10 @@
             } else {
                 alert("Preencha todos os campos obrigatórios.");
             }
+        }
+
+        function logar() {
+            window.location.replace("{% url 'login' %}")
         }
     </script>
 </body>

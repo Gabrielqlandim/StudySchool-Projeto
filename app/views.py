@@ -2,8 +2,16 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate,logout
 from django.contrib.auth import login as lg
+
+#home
+def home(request):
+    print(request.user.is_authenticated, request.user.is_active)
+    if request.user.is_authenticated and request.user.is_active:
+        return render(request, 'pages/home.html')
+    else:
+        return HttpResponse('Você precisa estar logado!')
 
 #login
 def login(request):
@@ -17,10 +25,11 @@ def login(request):
 
         if user:
             lg(request, user)
-            return render(request, 'pages/home.html')
+            return HttpResponseRedirect('/home')
         else:
             print(user)
             return HttpResponse('email ou senha invalidos')
+        
         
 def cadastro_prof(request):
     if request.method == 'GET':
@@ -41,20 +50,10 @@ def cadastro_prof(request):
 
             messages.success(request, 'Usuário cadastrado!')
         return HttpResponseRedirect('/')
-        
 
 #cadastro de aluno
 def criar_aluno(request):
     return
-
-
-#home
-def home(request):
-    print(request.user.is_authenticated, request.user.is_active)
-    if request.user.is_authenticated and request.user.is_active:
-        return render(request, 'pages/home.html')
-    else:
-        return HttpResponse('Você precisa estar logado!')
 
 def alunos(request):
     return render(request, 'pages/alunos.html')
@@ -66,13 +65,13 @@ def calendario_academico(request):
     return render(request, 'pages/calendario_academico.html')
 
 def perfil(request):
-    return render(request, 'pages/perfil.html')
-
-def cadastro(request):
-    return render(request, 'pages/cadastrar_alunos.html')
+    if request.method == 'GET':
+        return render(request, 'pages/perfil.html')
+    if request.method == 'POST':
+        logout(request,user)
+        return render(request, 'pages/login.html')
 
 #Alunos
-
 def alunos_notas(request):
     return render(request, 'pages/alunos/notas.html')
 
@@ -84,9 +83,6 @@ def alunos_frequencia(request):
 
 def alunos_avaliacao(request):
     return render(request, 'pages/alunos/avaliacao.html')
-
-def alunos_lista(request):
-    return render(request, 'pages/alunos/lista.html')
 
 def plataforma(request):
     if request.user.is_authenticated:

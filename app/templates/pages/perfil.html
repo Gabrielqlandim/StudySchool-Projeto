@@ -8,7 +8,9 @@
 
 
   <h1>Perfil do professor</h1>
-
+  <form action  = "{% url 'login' %}" method="POST">{% csrf_token %}
+    <input type="submit" value="Logout" id="botao">
+  </form>
 </body>
 
 </html>
